@@ -1,7 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const getCat = async () => {
+    try {
+      await fetch("http://thecatapi.com/api/images/get?format=src&type=gif")
+        .then((result) => result.json())
+        .then((result) => {
+          console.log(result);
+        });
+    } catch (error) {
+      console.log("Failed to retrieve the quote: " + error);
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +30,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <button onClick={getCat}>Get Cat</button>
     </div>
   );
 }
