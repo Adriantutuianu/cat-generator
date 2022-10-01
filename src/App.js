@@ -1,5 +1,4 @@
 import { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -7,12 +6,10 @@ function App() {
 
   const getCat = async () => {
     try {
-      await fetch("http://thecatapi.com/api/images/get?format=src&type=gif")
+      await fetch("https://aws.random.cat/meow")
         .then((result) => result.json())
         .then((result) => {
-          console.log(result);
-          // setCat - result
-          setCat(result);
+          setCat(result.file);
         });
     } catch (error) {
       console.log("Failed to retrieve the quote: " + error);
@@ -21,20 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
       <button onClick={getCat}>Get Cat</button>
       <img
         src={cat}
