@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -15,6 +15,10 @@ function App() {
       console.log("Failed to retrieve the quote: " + error);
     }
   };
+
+  useEffect(() => {
+    getCat();
+  }, []);
 
   return (
     <div className="App">
