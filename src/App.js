@@ -23,11 +23,13 @@ function App() {
   return (
     <div className="App">
       <button onClick={getCat}>Get Cat</button>
-      <img
-        src={cat}
-        alt="cat"
-        style={{ width: "200px", height: "200px" }}
-      ></img>
+      {cat && (
+        <img
+          src={cat}
+          alt="cat"
+          style={{ width: "200px", height: "200px" }}
+        ></img>
+      )}
     </div>
   );
 }
