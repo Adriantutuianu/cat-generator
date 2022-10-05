@@ -23,20 +23,8 @@ function App() {
   }, []);
 
   return (
-    <div className="App" style={{ height: "calc(100% - 50px)" }}>
-      <button
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          margin: "auto",
-          padding: "10px",
-          marginTop: "50px",
-        }}
-        onClick={getCat}
-      >
-        Get Cat
-      </button>
+    <div className="App">
+      <button onClick={getCat}>Get Cat</button>
       {cat && (
         <img
           src={cat}
@@ -44,7 +32,6 @@ function App() {
           style={{
             width: "500px",
             height: "500px",
-            marginTop: "100px",
           }}
         ></img>
       )}
