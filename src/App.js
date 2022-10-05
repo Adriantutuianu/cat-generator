@@ -24,7 +24,6 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={getCat}>Get Cat</button>
       {cat && (
         <img
           src={cat}
@@ -35,6 +34,7 @@ function App() {
           }}
         ></img>
       )}
+      <button onClick={getCat}>Get Cat</button>
       <footer
         style={{
           display: "flex",
