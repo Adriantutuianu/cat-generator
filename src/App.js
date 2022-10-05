@@ -34,7 +34,9 @@ function App() {
           }}
         ></img>
       )}
-      <button onClick={getCat}>Get Cat</button>
+      <button className="get-cat-btn" onClick={getCat}>
+        Get Cat
+      </button>
       <footer
         style={{
           display: "flex",
