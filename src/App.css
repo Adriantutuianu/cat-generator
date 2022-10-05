@@ -19,7 +19,8 @@ html {
 .App .get-cat-btn {
   margin: 40px 0;
   padding: 10px;
-  background: burlywood;
+  background: darkcyan;
+  color: whitesmoke;
   border: 1px solid black;
   border-radius: 3px;
   text-transform: uppercase;
@@ -29,7 +30,7 @@ html {
 
 .App .get-cat-btn:hover {
   cursor: pointer;
-  background: darkgoldenrod;
+  background: brown;
 }
 
 .App .image-random {
