@@ -24,18 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      {cat && (
-        <img
-          src={cat}
-          alt="cat"
-          style={{
-            width: "500px",
-            height: "500px",
-          }}
-        ></img>
-      )}
+      {cat && <img className="image-random" src={cat} alt="cat"></img>}
       <button className="get-cat-btn" onClick={getCat}>
-        Get Cat
+        Generate a new cat! 🐈
       </button>
       <footer
         style={{

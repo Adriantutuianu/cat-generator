@@ -1,6 +1,7 @@
 html {
   height: 100%;
   min-height: 100vh;
+  background: aliceblue;
 }
 
 #root {
@@ -29,4 +30,12 @@ html {
 .App .get-cat-btn:hover {
   cursor: pointer;
   background: darkgoldenrod;
+}
+
+.App .image-random {
+  width: auto;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 8px 8px 20px lightblue;
 }
