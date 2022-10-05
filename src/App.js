@@ -21,13 +21,29 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <button onClick={getCat}>Get Cat</button>
+    <div className="App" style={{ height: "100vh" }}>
+      <button
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: "auto",
+          padding: "10px",
+          marginTop: "50px",
+        }}
+        onClick={getCat}
+      >
+        Get Cat
+      </button>
       {cat && (
         <img
           src={cat}
           alt="cat"
-          style={{ width: "200px", height: "200px" }}
+          style={{
+            width: "500px",
+            height: "500px",
+            marginTop: "100px",
+          }}
         ></img>
       )}
     </div>
