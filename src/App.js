@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App" style={{ height: "100vh" }}>
+    <div className="App" style={{ height: "calc(100% - 50px)" }}>
       <button
         style={{
           display: "flex",
@@ -48,7 +48,16 @@ function App() {
           }}
         ></img>
       )}
-      <footer>@{year} - Made by Adrian Tut.</footer>
+      <footer
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "50px",
+        }}
+      >
+        @{year} - Made by Adrian Tut.
+      </footer>
     </div>
   );
 }
