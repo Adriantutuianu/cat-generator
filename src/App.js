@@ -16,6 +16,8 @@ function App() {
     }
   };
 
+  const year = new Date().getFullYear();
+
   useEffect(() => {
     getCat();
   }, []);
@@ -46,6 +48,7 @@ function App() {
           }}
         ></img>
       )}
+      <footer>@{year} - Made by Adrian Tut.</footer>
     </div>
   );
 }
